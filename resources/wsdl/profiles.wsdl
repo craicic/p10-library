@@ -1,0 +1,215 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://proj.gg.com/service/profiles" targetNamespace="http://proj.gg.com/service/profiles">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+                   targetNamespace="http://proj.gg.com/service/profiles">
+            <!--
+           ================ USER PROFILES RELATED METHODS ================
+           -->
+            <!-- ==== CRUD User methods ==== -->
+            <!-- Persist a profile  -->
+            <xs:element name="saveProfileRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tokenUUID" type="xs:string"/>
+                        <xs:element name="user" type="tns:user"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="saveProfileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="user" type="tns:user"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--  get a specific book by id  -->
+            <xs:element name="getProfileRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tokenUUID" type="xs:string"/>
+                        <xs:element name="id" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getProfileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="user" type="tns:user"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--  list all profiles  -->
+            <xs:element name="listAllProfilesRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tokenUUID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listAllProfilesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="users" type="tns:user"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--  delete a profile  -->
+            <xs:element name="deleteProfileRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tokenUUID" type="xs:string"/>
+                        <xs:element name="user" type="tns:user"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="deleteProfileResponse">
+                <xs:complexType></xs:complexType>
+            </xs:element>
+            <!--  get a list of late users  -->
+            <xs:element name="listLateProfilesRequest">
+                <xs:complexType>
+                    <xs:sequence></xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listLateProfilesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="users" type="tns:userMin"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!-- ================ OBJECTS ================ -->
+            <!--  a user with minimal information  -->
+            <xs:complexType name="userMin">
+                <xs:sequence>
+                    <xs:element name="firstName" type="xs:string"/>
+                    <xs:element name="lastName" type="xs:string"/>
+                    <xs:element name="mailAddress" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <!--  a user  -->
+            <xs:complexType name="user">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:int"/>
+                    <xs:element name="address" type="xs:string"/>
+                    <xs:element name="city" type="xs:string"/>
+                    <xs:element name="firstName" type="xs:string"/>
+                    <xs:element name="lastName" type="xs:string"/>
+                    <xs:element name="mailAddress" type="xs:string"/>
+                    <xs:element name="phoneNumber" type="xs:string"/>
+                    <xs:element name="postalCode" type="xs:int"/>
+                    <xs:element name="pseudo" type="xs:string"/>
+                    <xs:element name="lastConnection" type="xs:date"/>
+                    <xs:element name="registerDate" type="xs:date"/>
+                    <xs:element name="password" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="listLateProfilesResponse">
+        <wsdl:part element="tns:listLateProfilesResponse" name="listLateProfilesResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="listAllProfilesResponse">
+        <wsdl:part element="tns:listAllProfilesResponse" name="listAllProfilesResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteProfileResponse">
+        <wsdl:part element="tns:deleteProfileResponse" name="deleteProfileResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="saveProfileResponse">
+        <wsdl:part element="tns:saveProfileResponse" name="saveProfileResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="saveProfileRequest">
+        <wsdl:part element="tns:saveProfileRequest" name="saveProfileRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getProfileResponse">
+        <wsdl:part element="tns:getProfileResponse" name="getProfileResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="listAllProfilesRequest">
+        <wsdl:part element="tns:listAllProfilesRequest" name="listAllProfilesRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteProfileRequest">
+        <wsdl:part element="tns:deleteProfileRequest" name="deleteProfileRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getProfileRequest">
+        <wsdl:part element="tns:getProfileRequest" name="getProfileRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="listLateProfilesRequest">
+        <wsdl:part element="tns:listLateProfilesRequest" name="listLateProfilesRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="ProfilePort">
+        <wsdl:operation name="listLateProfiles">
+            <wsdl:input message="tns:listLateProfilesRequest" name="listLateProfilesRequest"></wsdl:input>
+            <wsdl:output message="tns:listLateProfilesResponse" name="listLateProfilesResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="listAllProfiles">
+            <wsdl:input message="tns:listAllProfilesRequest" name="listAllProfilesRequest"></wsdl:input>
+            <wsdl:output message="tns:listAllProfilesResponse" name="listAllProfilesResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProfile">
+            <wsdl:input message="tns:deleteProfileRequest" name="deleteProfileRequest"></wsdl:input>
+            <wsdl:output message="tns:deleteProfileResponse" name="deleteProfileResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="saveProfile">
+            <wsdl:input message="tns:saveProfileRequest" name="saveProfileRequest"></wsdl:input>
+            <wsdl:output message="tns:saveProfileResponse" name="saveProfileResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getProfile">
+            <wsdl:input message="tns:getProfileRequest" name="getProfileRequest"></wsdl:input>
+            <wsdl:output message="tns:getProfileResponse" name="getProfileResponse"></wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ProfilePortSoap11" type="tns:ProfilePort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="listLateProfiles">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="listLateProfilesRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="listLateProfilesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="listAllProfiles">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="listAllProfilesRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="listAllProfilesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProfile">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="deleteProfileRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteProfileResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="saveProfile">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="saveProfileRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="saveProfileResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getProfile">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="getProfileRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getProfileResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ProfilePortService">
+        <wsdl:port binding="tns:ProfilePortSoap11" name="ProfilePortSoap11">
+            <soap:address location="http://localhost:8080/library-service/ws"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
