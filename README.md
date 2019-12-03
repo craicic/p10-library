@@ -7,15 +7,15 @@ The purpose is to create the software system for a
   Architecture - see diagram. 
  
 
-[Web service](https://github.com/xxjokerx/library-service)
+[Web service](https://github.com/xxjokerx/p10-library-service)
 
-[Client Web application](https://github.com/xxjokerx/library-client)
+[Client Web application](https://github.com/xxjokerx/p10-library-client)
 
-[Batch](https://github.com/xxjokerx/library-batch)
+[Batch](https://github.com/xxjokerx/p10-library-batch)
 
 Each one describe the deployment procedure. Follow them in this order to run the apps.
 
-![Component diagram](https://raw.githubusercontent.com/xxjokerx/library/master/documents/component.png)
+![Component diagram](https://raw.githubusercontent.com/xxjokerx/p10-library/master/documents/component.png)
 
 
  
