@@ -17,5 +17,9 @@ Each one describe the deployment procedure. Follow them in this order to run the
 
 ![Component diagram](https://raw.githubusercontent.com/xxjokerx/p10-library/master/documents/component.png)
 
+## Release notes
 
+##### 1.0.0
+
+All components are in version 1.0.0
  
