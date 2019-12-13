@@ -25,6 +25,14 @@ All components are in version 1.0.0
  
 ## Upcoming Version
 
+##### 1.0.1
+
+Will address a bug listed below.
+
 ##### 1.1.0
 
-Will provide an advanced booking system
+Will provide an advanced booking system.
+
+## Known bug
+
+A user can extend a loan while out-of-date. [Web service](https://github.com/xxjokerx/p10-library-service) has a dedicated branch to address it. Fixed component will be release in version 1.0.1
