@@ -19,20 +19,16 @@ Each one describe the deployment procedure. Follow them in this order to run the
 
 ## Changelog
 
+##### 1.0.1 - 14 Dec 2019
+
+Address a bug where a user could extend a loan while out-of-date.
+
 ##### 1.0.0 - 11 Dec 2019
 
 All components are in version 1.0.0
  
 ## Upcoming Version
 
-##### 1.0.1
-
-Will address a bug listed below.
-
 ##### 1.1.0
 
 Will provide an advanced booking system.
-
-## Known bug
-
-A user can extend a loan while out-of-date. [Web service](https://github.com/xxjokerx/p10-library-service) has a dedicated branch to address it. Fixed component will be release in version 1.0.1
