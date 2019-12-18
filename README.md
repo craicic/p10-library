@@ -19,13 +19,17 @@ Each one describe the deployment procedure. Follow them in this order to run the
 
 ## Changelog
 
+##### 1.0.0 - 11 Dec 2019
+
+All components are in version 1.0.0
+
 ##### 1.0.1 - 14 Dec 2019
 
 Address a bug where a user could extend a loan while out-of-date.
 
-##### 1.0.0 - 11 Dec 2019
+##### 1.0.1.1 - 18 Dec 2019
 
-All components are in version 1.0.0
+Address a bug found in version 1.0.1.
  
 ## Upcoming Version
 
