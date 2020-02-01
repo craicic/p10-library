@@ -1,11 +1,9 @@
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tns="http://proj.gg.com/service/profiles" targetNamespace="http://proj.gg.com/service/profiles">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://proj.gg.com/service/profiles" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://proj.gg.com/service/profiles" targetNamespace="http://proj.gg.com/service/profiles">
     <wsdl:types>
-        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-                   targetNamespace="http://proj.gg.com/service/profiles">
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://proj.gg.com/service/profiles">
             <!--
-           ================ USER PROFILES RELATED METHODS ================
-           -->
+            ================ USER PROFILES RELATED METHODS ================
+            -->
             <!-- ==== CRUD User methods ==== -->
             <!-- Persist a profile  -->
             <xs:element name="saveProfileRequest">
@@ -64,12 +62,12 @@
                 </xs:complexType>
             </xs:element>
             <xs:element name="deleteProfileResponse">
-                <xs:complexType></xs:complexType>
+                <xs:complexType> </xs:complexType>
             </xs:element>
             <!--  get a list of late users  -->
             <xs:element name="listLateProfilesRequest">
                 <xs:complexType>
-                    <xs:sequence></xs:sequence>
+                    <xs:sequence> </xs:sequence>
                 </xs:complexType>
             </xs:element>
             <xs:element name="listLateProfilesResponse">
@@ -108,55 +106,55 @@
         </xs:schema>
     </wsdl:types>
     <wsdl:message name="listLateProfilesResponse">
-        <wsdl:part element="tns:listLateProfilesResponse" name="listLateProfilesResponse"></wsdl:part>
+        <wsdl:part element="tns:listLateProfilesResponse" name="listLateProfilesResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="listAllProfilesResponse">
-        <wsdl:part element="tns:listAllProfilesResponse" name="listAllProfilesResponse"></wsdl:part>
+        <wsdl:part element="tns:listAllProfilesResponse" name="listAllProfilesResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="deleteProfileResponse">
-        <wsdl:part element="tns:deleteProfileResponse" name="deleteProfileResponse"></wsdl:part>
+        <wsdl:part element="tns:deleteProfileResponse" name="deleteProfileResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="saveProfileResponse">
-        <wsdl:part element="tns:saveProfileResponse" name="saveProfileResponse"></wsdl:part>
+        <wsdl:part element="tns:saveProfileResponse" name="saveProfileResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="saveProfileRequest">
-        <wsdl:part element="tns:saveProfileRequest" name="saveProfileRequest"></wsdl:part>
+        <wsdl:part element="tns:saveProfileRequest" name="saveProfileRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="getProfileResponse">
-        <wsdl:part element="tns:getProfileResponse" name="getProfileResponse"></wsdl:part>
+        <wsdl:part element="tns:getProfileResponse" name="getProfileResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="listAllProfilesRequest">
-        <wsdl:part element="tns:listAllProfilesRequest" name="listAllProfilesRequest"></wsdl:part>
+        <wsdl:part element="tns:listAllProfilesRequest" name="listAllProfilesRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="deleteProfileRequest">
-        <wsdl:part element="tns:deleteProfileRequest" name="deleteProfileRequest"></wsdl:part>
+        <wsdl:part element="tns:deleteProfileRequest" name="deleteProfileRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="getProfileRequest">
-        <wsdl:part element="tns:getProfileRequest" name="getProfileRequest"></wsdl:part>
+        <wsdl:part element="tns:getProfileRequest" name="getProfileRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="listLateProfilesRequest">
-        <wsdl:part element="tns:listLateProfilesRequest" name="listLateProfilesRequest"></wsdl:part>
+        <wsdl:part element="tns:listLateProfilesRequest" name="listLateProfilesRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:portType name="ProfilePort">
         <wsdl:operation name="listLateProfiles">
-            <wsdl:input message="tns:listLateProfilesRequest" name="listLateProfilesRequest"></wsdl:input>
-            <wsdl:output message="tns:listLateProfilesResponse" name="listLateProfilesResponse"></wsdl:output>
+            <wsdl:input message="tns:listLateProfilesRequest" name="listLateProfilesRequest"> </wsdl:input>
+            <wsdl:output message="tns:listLateProfilesResponse" name="listLateProfilesResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="listAllProfiles">
-            <wsdl:input message="tns:listAllProfilesRequest" name="listAllProfilesRequest"></wsdl:input>
-            <wsdl:output message="tns:listAllProfilesResponse" name="listAllProfilesResponse"></wsdl:output>
+            <wsdl:input message="tns:listAllProfilesRequest" name="listAllProfilesRequest"> </wsdl:input>
+            <wsdl:output message="tns:listAllProfilesResponse" name="listAllProfilesResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="deleteProfile">
-            <wsdl:input message="tns:deleteProfileRequest" name="deleteProfileRequest"></wsdl:input>
-            <wsdl:output message="tns:deleteProfileResponse" name="deleteProfileResponse"></wsdl:output>
+            <wsdl:input message="tns:deleteProfileRequest" name="deleteProfileRequest"> </wsdl:input>
+            <wsdl:output message="tns:deleteProfileResponse" name="deleteProfileResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="saveProfile">
-            <wsdl:input message="tns:saveProfileRequest" name="saveProfileRequest"></wsdl:input>
-            <wsdl:output message="tns:saveProfileResponse" name="saveProfileResponse"></wsdl:output>
+            <wsdl:input message="tns:saveProfileRequest" name="saveProfileRequest"> </wsdl:input>
+            <wsdl:output message="tns:saveProfileResponse" name="saveProfileResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="getProfile">
-            <wsdl:input message="tns:getProfileRequest" name="getProfileRequest"></wsdl:input>
-            <wsdl:output message="tns:getProfileResponse" name="getProfileResponse"></wsdl:output>
+            <wsdl:input message="tns:getProfileRequest" name="getProfileRequest"> </wsdl:input>
+            <wsdl:output message="tns:getProfileResponse" name="getProfileResponse"> </wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="ProfilePortSoap11" type="tns:ProfilePort">
@@ -209,7 +207,7 @@
     </wsdl:binding>
     <wsdl:service name="ProfilePortService">
         <wsdl:port binding="tns:ProfilePortSoap11" name="ProfilePortSoap11">
-            <soap:address location="http://localhost:8080/library-service/ws"/>
+            <soap:address location="http://localhost:8080/ws"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

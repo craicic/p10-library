@@ -1,11 +1,9 @@
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tns="http://proj.gg.com/service/users" targetNamespace="http://proj.gg.com/service/users">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://proj.gg.com/service/users" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://proj.gg.com/service/users" targetNamespace="http://proj.gg.com/service/users">
     <wsdl:types>
-        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-                   targetNamespace="http://proj.gg.com/service/users">
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://proj.gg.com/service/users">
             <!--
-           ================ USER RELATED METHODS ================
-           -->
+            ================ USER RELATED METHODS ================
+            -->
             <!--  login user  -->
             <xs:element name="loginUserRequest">
                 <xs:complexType>
@@ -65,7 +63,7 @@
             </xs:element>
             <xs:element name="changePasswordResponse">
                 <xs:complexType>
-                    <xs:sequence></xs:sequence>
+                    <xs:sequence> </xs:sequence>
                 </xs:complexType>
             </xs:element>
             <!-- ================ OBJECTS ================ -->
@@ -97,45 +95,45 @@
         </xs:schema>
     </wsdl:types>
     <wsdl:message name="logoutUserResponse">
-        <wsdl:part element="tns:logoutUserResponse" name="logoutUserResponse"></wsdl:part>
+        <wsdl:part element="tns:logoutUserResponse" name="logoutUserResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="logoutUserRequest">
-        <wsdl:part element="tns:logoutUserRequest" name="logoutUserRequest"></wsdl:part>
+        <wsdl:part element="tns:logoutUserRequest" name="logoutUserRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="loginUserRequest">
-        <wsdl:part element="tns:loginUserRequest" name="loginUserRequest"></wsdl:part>
+        <wsdl:part element="tns:loginUserRequest" name="loginUserRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="registerUserResponse">
-        <wsdl:part element="tns:registerUserResponse" name="registerUserResponse"></wsdl:part>
+        <wsdl:part element="tns:registerUserResponse" name="registerUserResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="changePasswordRequest">
-        <wsdl:part element="tns:changePasswordRequest" name="changePasswordRequest"></wsdl:part>
+        <wsdl:part element="tns:changePasswordRequest" name="changePasswordRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="registerUserRequest">
-        <wsdl:part element="tns:registerUserRequest" name="registerUserRequest"></wsdl:part>
+        <wsdl:part element="tns:registerUserRequest" name="registerUserRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="changePasswordResponse">
-        <wsdl:part element="tns:changePasswordResponse" name="changePasswordResponse"></wsdl:part>
+        <wsdl:part element="tns:changePasswordResponse" name="changePasswordResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="loginUserResponse">
-        <wsdl:part element="tns:loginUserResponse" name="loginUserResponse"></wsdl:part>
+        <wsdl:part element="tns:loginUserResponse" name="loginUserResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:portType name="UserPort">
         <wsdl:operation name="logoutUser">
-            <wsdl:input message="tns:logoutUserRequest" name="logoutUserRequest"></wsdl:input>
-            <wsdl:output message="tns:logoutUserResponse" name="logoutUserResponse"></wsdl:output>
+            <wsdl:input message="tns:logoutUserRequest" name="logoutUserRequest"> </wsdl:input>
+            <wsdl:output message="tns:logoutUserResponse" name="logoutUserResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="loginUser">
-            <wsdl:input message="tns:loginUserRequest" name="loginUserRequest"></wsdl:input>
-            <wsdl:output message="tns:loginUserResponse" name="loginUserResponse"></wsdl:output>
+            <wsdl:input message="tns:loginUserRequest" name="loginUserRequest"> </wsdl:input>
+            <wsdl:output message="tns:loginUserResponse" name="loginUserResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="registerUser">
-            <wsdl:input message="tns:registerUserRequest" name="registerUserRequest"></wsdl:input>
-            <wsdl:output message="tns:registerUserResponse" name="registerUserResponse"></wsdl:output>
+            <wsdl:input message="tns:registerUserRequest" name="registerUserRequest"> </wsdl:input>
+            <wsdl:output message="tns:registerUserResponse" name="registerUserResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="changePassword">
-            <wsdl:input message="tns:changePasswordRequest" name="changePasswordRequest"></wsdl:input>
-            <wsdl:output message="tns:changePasswordResponse" name="changePasswordResponse"></wsdl:output>
+            <wsdl:input message="tns:changePasswordRequest" name="changePasswordRequest"> </wsdl:input>
+            <wsdl:output message="tns:changePasswordResponse" name="changePasswordResponse"> </wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="UserPortSoap11" type="tns:UserPort">
@@ -179,7 +177,7 @@
     </wsdl:binding>
     <wsdl:service name="UserPortService">
         <wsdl:port binding="tns:UserPortSoap11" name="UserPortSoap11">
-            <soap:address location="http://localhost:8080/library-service/ws"/>
+            <soap:address location="http://localhost:8080/ws"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

@@ -31,8 +31,8 @@ Address a bug where a user could extend a loan while out-of-date.
 
 Address a bug found in version 1.0.1.
  
-## Upcoming Version
+## Current release version
 
-##### 1.1.0
+##### 1.1.0 - 1 Feb 2020
 
-Will provide an advanced booking system.
+Provide an advanced booking system.

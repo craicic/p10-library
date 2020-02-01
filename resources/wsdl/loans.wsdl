@@ -1,11 +1,9 @@
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tns="http://proj.gg.com/service/loans" targetNamespace="http://proj.gg.com/service/loans">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://proj.gg.com/service/loans" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://proj.gg.com/service/loans" targetNamespace="http://proj.gg.com/service/loans">
     <wsdl:types>
-        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-                   targetNamespace="http://proj.gg.com/service/loans">
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://proj.gg.com/service/loans">
             <!--
-           ================ LOAN RELATED METHODS ================
-           -->
+            ================ LOAN RELATED METHODS ================
+            -->
             <!-- ==== CRUD Loan methods ==== -->
             <!--  persist a loan  -->
             <xs:element name="createLoanRequest">
@@ -112,7 +110,7 @@
                 </xs:complexType>
             </xs:element>
             <xs:element name="deleteLoanResponse">
-                <xs:complexType></xs:complexType>
+                <xs:complexType> </xs:complexType>
             </xs:element>
             <!--  find all loans for a certain user  -->
             <xs:element name="findAllLoansByUserIdRequest">
@@ -180,85 +178,85 @@
         </xs:schema>
     </wsdl:types>
     <wsdl:message name="saveLoanResponse">
-        <wsdl:part element="tns:saveLoanResponse" name="saveLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:saveLoanResponse" name="saveLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="listAllLoansResponse">
-        <wsdl:part element="tns:listAllLoansResponse" name="listAllLoansResponse"></wsdl:part>
+        <wsdl:part element="tns:listAllLoansResponse" name="listAllLoansResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="findAllLoansByUserIdRequest">
-        <wsdl:part element="tns:findAllLoansByUserIdRequest" name="findAllLoansByUserIdRequest"></wsdl:part>
+        <wsdl:part element="tns:findAllLoansByUserIdRequest" name="findAllLoansByUserIdRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="deleteLoanResponse">
-        <wsdl:part element="tns:deleteLoanResponse" name="deleteLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:deleteLoanResponse" name="deleteLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="extendLoanResponse">
-        <wsdl:part element="tns:extendLoanResponse" name="extendLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:extendLoanResponse" name="extendLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="closeLoanRequest">
-        <wsdl:part element="tns:closeLoanRequest" name="closeLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:closeLoanRequest" name="closeLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="closeLoanResponse">
-        <wsdl:part element="tns:closeLoanResponse" name="closeLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:closeLoanResponse" name="closeLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="createLoanResponse">
-        <wsdl:part element="tns:createLoanResponse" name="createLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:createLoanResponse" name="createLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="getLoanRequest">
-        <wsdl:part element="tns:getLoanRequest" name="getLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:getLoanRequest" name="getLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="createLoanRequest">
-        <wsdl:part element="tns:createLoanRequest" name="createLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:createLoanRequest" name="createLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="saveLoanRequest">
-        <wsdl:part element="tns:saveLoanRequest" name="saveLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:saveLoanRequest" name="saveLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="deleteLoanRequest">
-        <wsdl:part element="tns:deleteLoanRequest" name="deleteLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:deleteLoanRequest" name="deleteLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="extendLoanRequest">
-        <wsdl:part element="tns:extendLoanRequest" name="extendLoanRequest"></wsdl:part>
+        <wsdl:part element="tns:extendLoanRequest" name="extendLoanRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="listAllLoansRequest">
-        <wsdl:part element="tns:listAllLoansRequest" name="listAllLoansRequest"></wsdl:part>
+        <wsdl:part element="tns:listAllLoansRequest" name="listAllLoansRequest"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="getLoanResponse">
-        <wsdl:part element="tns:getLoanResponse" name="getLoanResponse"></wsdl:part>
+        <wsdl:part element="tns:getLoanResponse" name="getLoanResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:message name="findAllLoansByUserIdResponse">
-        <wsdl:part element="tns:findAllLoansByUserIdResponse" name="findAllLoansByUserIdResponse"></wsdl:part>
+        <wsdl:part element="tns:findAllLoansByUserIdResponse" name="findAllLoansByUserIdResponse"> </wsdl:part>
     </wsdl:message>
     <wsdl:portType name="LoanPort">
         <wsdl:operation name="saveLoan">
-            <wsdl:input message="tns:saveLoanRequest" name="saveLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:saveLoanResponse" name="saveLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:saveLoanRequest" name="saveLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:saveLoanResponse" name="saveLoanResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="listAllLoans">
-            <wsdl:input message="tns:listAllLoansRequest" name="listAllLoansRequest"></wsdl:input>
-            <wsdl:output message="tns:listAllLoansResponse" name="listAllLoansResponse"></wsdl:output>
+            <wsdl:input message="tns:listAllLoansRequest" name="listAllLoansRequest"> </wsdl:input>
+            <wsdl:output message="tns:listAllLoansResponse" name="listAllLoansResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="findAllLoansByUserId">
-            <wsdl:input message="tns:findAllLoansByUserIdRequest" name="findAllLoansByUserIdRequest"></wsdl:input>
-            <wsdl:output message="tns:findAllLoansByUserIdResponse" name="findAllLoansByUserIdResponse"></wsdl:output>
+            <wsdl:input message="tns:findAllLoansByUserIdRequest" name="findAllLoansByUserIdRequest"> </wsdl:input>
+            <wsdl:output message="tns:findAllLoansByUserIdResponse" name="findAllLoansByUserIdResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="deleteLoan">
-            <wsdl:input message="tns:deleteLoanRequest" name="deleteLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:deleteLoanResponse" name="deleteLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:deleteLoanRequest" name="deleteLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:deleteLoanResponse" name="deleteLoanResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="extendLoan">
-            <wsdl:input message="tns:extendLoanRequest" name="extendLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:extendLoanResponse" name="extendLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:extendLoanRequest" name="extendLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:extendLoanResponse" name="extendLoanResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="closeLoan">
-            <wsdl:input message="tns:closeLoanRequest" name="closeLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:closeLoanResponse" name="closeLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:closeLoanRequest" name="closeLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:closeLoanResponse" name="closeLoanResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="createLoan">
-            <wsdl:input message="tns:createLoanRequest" name="createLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:createLoanResponse" name="createLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:createLoanRequest" name="createLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:createLoanResponse" name="createLoanResponse"> </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="getLoan">
-            <wsdl:input message="tns:getLoanRequest" name="getLoanRequest"></wsdl:input>
-            <wsdl:output message="tns:getLoanResponse" name="getLoanResponse"></wsdl:output>
+            <wsdl:input message="tns:getLoanRequest" name="getLoanRequest"> </wsdl:input>
+            <wsdl:output message="tns:getLoanResponse" name="getLoanResponse"> </wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="LoanPortSoap11" type="tns:LoanPort">
@@ -338,7 +336,7 @@
     </wsdl:binding>
     <wsdl:service name="LoanPortService">
         <wsdl:port binding="tns:LoanPortSoap11" name="LoanPortSoap11">
-            <soap:address location="http://localhost:8080/library-service/ws"/>
+            <soap:address location="http://localhost:8080/ws"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
